@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="example2.js"></script>
+</head>
+
+<body>
+    
+    <script>
+        // 使用迴圈的前提
+        // 1. 連續執行一樣的程式敘述
+        // 2. 有規律性
+        // for()=>已知執行次數
+        // for(參數1; 參數2; 參數3)
+        // 參數1: 迴圈計數器變數起始值
+        // 參數2: 執行迴圈的條件
+        // 參數3: 每次執行迴圈後，計時器變數的增減值
+        // 如 i=i+1 可直接寫成 i++ ，但如是+1以外的只能寫成 i=i+
+
+        // ex1:顯示連續5次Hello+換行
+        // document.write('Hello<br>');
+        // document.write('Hello<br>');
+        // document.write('Hello<br>');
+        // document.write('Hello<br>');
+        // document.write('Hello<br>');
+        // for (let i = 1; i <= 5; i++) {
+        //     document.write('Hello<br>');
+        // }
+        // 建立水平線=><hr>
+        // ocument.write('<hr>');
+
+        // ex2:顯示數字10-15
+        // 寫法一
+        for (i = 1; i <= 6; i++) {
+            document.write(i + 9 + ',');
+        }
+        document.write('<hr>');
+
+        // 寫法二
+        for (i = 10; i <= 15; i++) {
+            document.write(i + ',');
+        }
+        document.write('<hr>');
+
+        // 寫法三
+        // 使用迴圈外的變數顯示數字
+        let a = 10;
+        for (let i = 1; i <= 6; i++) {
+            document.write(a + ',');
+            a++;
+        }
+        document.write('<hr>');
+
+        // 寫法四
+        //使用迴圈外的變數顯示數字
+        let b = 9;
+        for (let i = 1; i <= 6; i++) {
+            document.write((b = b + 1) + ",");
+        }
+        document.write('<hr>');
+
+        // 寫法五
+        // 使用迴圈外的變數顯示數字
+        // C++
+        // 1.先顯示
+        // 2.再加1
+        let c = 10;
+        for (let i = 1; i <= 6; i++) {
+            document.write(c++ + ',');
+        }
+        document.write('<hr>');
+
+        // 寫法六
+        // 使用迴圈外的變數顯示數字
+        // ++c
+        // 1.先加1
+        // 2.再顯示
+        let d = 9;
+        for (let i = 1; i <= 6; i++) {
+            document.write(++d + ',');
+        }
+        document.write('<hr>');
+
+        // ex3: 顯示1-10的奇數，用空白隔開
+        // % =>餘數
+        for (let i=1;i<=10;i++){
+            if(i%2===1){
+                document.write(i+" ");
+            }
+        }
+        document.write('<hr>');
+
+        // ex4: 顯示1-10的偶數，用逗號隔開，但最後一個逗號取消
+        for (let i=1;i<=10;i++){
+            if(i%2===0){
+                // 1.先顯示值
+                document.write(i);
+                // 2.再檢查不是最後一個值時，顯示逗號
+                if(i != 10){
+                    document.write(',');
+                }
+            }
+        }
+        document.write('<hr>');
+
+        for (let i=1;i<=10;i++){
+            if(i%2===0){
+                // 1.先檢查是否為最後一個值，不是=>值+逗號
+                if(i!=10){
+                    document.write(i+',');
+                }else{
+                    // 2.最後一個值，不顯示逗號=>值
+                    document.write(i);
+                }
+            }
+        }
+                
+                
+
+
+
+    </script>
+</body>
+
+</html>
