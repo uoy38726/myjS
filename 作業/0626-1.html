@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        //作業1 猜數字
+
+        let bingoNum =99
+        let A = prompt("猜數字")
+
+        for(i=1;i<=3;i++){
+            if( i<3 ){
+                if( A != bingoNum ){
+                    console.log(`第${i}次:${A}`)
+                    A = prompt("在猜一次")
+                }
+                else if (A ==bingoNum){
+                    console.log("答對了")
+                    break;
+                }
+            }
+            else if (i==3 && A == bingoNum){
+                    console.log("答對了")
+                    break;}
+            else {
+                console.log(`第${i}次:${A}`)
+                break;
+            }
+    }
+
+
+    </script>
+</body>
+
+</html>
