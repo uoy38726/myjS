@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1-10合計 => 使用 do-while
+        // 先執行，再檢查
+        // 第一次執行時不會檢查
+        // 第二次開始執行前會檢查
+
+        // let s3 = 0;
+        // let i = 1;
+        // do {
+        //     s3 = s3 + i;
+        //     i++;
+        // } while (i <= 10);
+        // console.log(`1+2+3+...+10=${s3}`);
+
+        /// 請輸入1-100 中,5倍數的值並加總
+        // 直到合計大於50就結束迴圈
+
+        // i=5 , tot=5
+        // i=10, tot=15
+        // i=15, tot=30
+        // i=20, tot=50
+        // i=25, tot=75
+
+        //  選取想改寫文字，按ctrl + d，可同步刪除添加
+
+        //for
+        let tot = 0;
+        console.log(`------ for ------`)
+        for (i = 5; i <= 100; i++) {
+            if (i % 5 == 0) {
+                //簡寫 => tot + = i;
+                tot = tot + i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break;  // 結束迴圈
+                }
+
+            }
+        }
+
+        //while
+        console.log(`------ while ------`)
+        tot = 0;
+        let i = 1;           // 沿用for迴圈時的tot變數，所以tot=0
+        while (i <= 100) {
+            if (i % 5 === 0) {
+                //簡寫 => tot + = i;
+                tot = tot + i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break;  // 結束迴圈
+                }
+            }
+            i++;           // 不管是否為5的倍數都要+1
+        }
+
+        //do-while
+
+
+
+    </script>
+</body>
+
+</html>
