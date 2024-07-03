@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q.請輸入成績N次，直到輸入(-1或取消)就結束
+
+        /*需顯示如下
+        
+        第1次分數:xx分
+        第xx次分數:xx分
+        第xx次分數:xx分
+        第xx次分數:xx分
+        第xx次分數:xx分
+        ---------
+        及格人數:xx人
+        不及格人數:xx人
+        總分:xx分
+        總平均:xx分
+        
+        */
+
+        //A3
+        let count = 0;  //第N次
+        let pass = 0;   //及格人數
+        let fali = 0;   //不及格人數
+        let tot = 0;
+        let avg = 0;
+
+        while (true) {
+            let score = prompt(`請輸入分數`);
+            if (score === '-1' || score == null) {
+                document.write('結束')
+                break;
+            }
+            //及格與否
+            if(score>=60){
+            pass++;
+            }else{
+                fali++;
+            }
+            count++;
+            document.write(`第${count}次:${score}分<br>`);
+        
+        }
+        // 總分壘計
+        tot = tot + score; 
+
+
+
+        // console.log('結束了');
+
+
+        /* A2. */
+        // function chkScore(intNum) {
+        //     if (intNum >= 60) {
+        //         return '及格';
+        //     } else {
+        //         return '不及格';
+        //     }
+        // }
+        // let score = Number(prompt(`請輸入分數`));
+        // let result = chkScore(score);
+
+        // for( i=1;i<100;i++){
+        //     if(score == -1){
+        // document.write(`出現"-1"結束統計`)
+        // break;
+        // }else if(score == null ){
+        //     document.write(`按下取消,結束統計`)
+        //     break;}
+
+        // }
+        // document.write("第次:"+result+"分<br>");
+
+
+        /* A2. */
+        //函式
+        // let score1 = Number(prompt(`請輸入分數`));
+        // sc(score1)
+
+        // 第一次 xxx 分
+        //     i = 1;
+        //     function sc(score) {
+        //         While(i < 100){
+        //         if (score == -1 || score == null) {
+        //             document.write(`結束`)
+        //         }
+        //         i++;
+
+        //         document.write(`第${i}次${score}分`)
+        // }
+
+
+
+
+        // 1 => true
+    </script>
+</body>
+
+</html>
