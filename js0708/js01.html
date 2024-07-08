@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="tot3(5,3);">二數相加1</button>
+    <button onclick="console.log(tot3(5,3));">二數相加2</button>
+    <script>
+        // 兩數相加
+
+        // 傳統寫法
+        function tot(n1,n2){
+            return n1+ n2;
+        }
+
+        console.log(tot(5,3));
+
+        // 匿名函式
+        let tot2=function(n1,n2){     // 把函式宣告成變數名稱，function沒有變數名稱
+            return n1+n2;             // 實務上大多用箭頭韓式或匿名函式，傳統反而較少
+        }
+        console.log(tot2(5,3));
+
+        let tot3=function(n1,n2){
+            console.log(n1+n2);
+        }
+
+        // 函式中不能呼叫自己
+
+        // 箭頭函式 (參數寫在等號與箭頭之間)
+        let tot4 =(n1,n2)=>{
+            return n1+n2;
+        }
+        console.log('tot4=>'+tot4(5,3));
+
+        // 只要式函式，無論是否有參數，小括號()都不能沈略
+        let sayHi=()=>{
+            document.write("Hi");
+        }
+        sayHi();
+    </script>
+</body>
+</html>
