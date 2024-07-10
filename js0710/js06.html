@@ -36,7 +36,43 @@
         arr.forEach((n)=>{
         console.log(n);
         });
+
+        //用上述方法顯示出陣列中字串
+        // 用typeOf()
+        let arr1 = [1, 2, 3, 4, 5, '12345'];
+
+        // for
+        for(let i=0;i<arr1.length;i++){
+            if(typeof(arr[i])==="string"){
+                console.log(arr[i]);
+            }
+        }
+
+         // for of   (let 變數名稱 of 陣列名稱)
+        console.log('----for of-----')
+        for(let n of arr){
+            if(typeof(n)==="string"){
+                console.log(n);
+            }
+        }
+
+        // map
+        console.log('-----map----')
+        arr.map((n) => {
+            if(typeof(n)==="string"){
+                console.log(n);
+            }
+        });
+        console.log(arr_Map_All_Data);
         
+        
+        // forEach
+        console.log('---------')
+        arr.forEach((n)=>{
+            if(typeof(n)==="string"){
+                console.log(n);
+            }
+        });
     </script>
 </body>
 
