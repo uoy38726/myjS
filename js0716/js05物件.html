@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 正常函式呼叫
+        // let userName = '建仔';
+        // let userAge = 7;
+        // function sayHi(){
+        //     console.log(`Hi,我是${userName}，今年${userAge}歲`);
+        // }
+        // sayHi();
+
+        // 建立物件
+        //方法一:實體化
+        // let user={};    // {} =>物件
+        // let score=[];   // [] =>陣列
+        let user={
+            //物件屬值
+            //屬性名稱:屬性值  =>任何資料都可被視為屬性質
+            name:'建仔',
+            age:7,
+            //方法物件
+            //方法名稱:function(){...}
+            sayHi:function(){
+                console.log(`Hi,我是${this.userName}，今年${this.userAge}歲`);
+            }               // this. =>目前同一個物件中的屬性
+        }; 
+        
+        // 呼叫物件
+        // 使用成員運算子
+        console.log(user.name);
+        console.log(user.age);
+        user.sayHi();
+        // 使用中括號，取的物件屬性
+        console.log(user['name']);
+        
+        // 修改物件中的年紀屬性
+        user.age = 10;
+        console.log(user.age);
+
+        // 修改物件中的年紀屬性
+        delete user.age;
+        console.log(user.age);
+
+        // 建立物件方法二:建構子(new)
+        // 使用new建立一個空物件object
+        let mobile = new Object();
+        // 再建立屬性或方法
+        // 建立品牌屬性
+        mobile.brand = 'iphone';
+        // 建立顏色屬性
+        mobile.color = 'block';
+        // 建立尺寸屬性
+        mobile.size = '14';
+        // 建立方法
+        mobile.showMsg=function(){
+            console.log(`品牌${this.brand},色彩${this.color},尺寸${this.size}`)
+        }
+        
+
+
+
+        //汽車物件
+        let car={
+        //品牌
+        //logo
+        //價格
+        //....等
+        };
+
+   
+    </script>
+</body>
+</html>
