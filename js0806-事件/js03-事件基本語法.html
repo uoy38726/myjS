@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件基本語法 -->
+    <!-- <div 事件名稱="程式碼">標籤內容</div> -->
+    <!-- <button 事件名稱="程式碼">按鈕內容</button> -->
+    
+    <!--原本=> <div onclick="document.body.innerHTML='Hello'">按一下變更內容</div> -->
+
+    <div onclick="changeDiv();">按一下變更內容</div>
+
+    <h2 onclick="changeDiv2();">標題2</h2>
+    <p id="p2" class="p2">
+        第2段Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam temporibus quam porro distinctio ex repellendus est quas, quisquam recusandae ea laudantium, atque perferendis accusantium similique modi omnis hic laboriosam natus.
+    </p>
+
+    <script>
+    function changeDiv(){
+        // 變更網頁body內容
+        document.body
+    }
+    </script>
+    
+</body>
+</html>
