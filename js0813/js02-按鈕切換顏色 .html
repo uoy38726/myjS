@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="myDiv"></div><br>
+        <button onclick="changeR();">紅</button>
+        <button onclick="changeB();">藍</button>
+        <button onclick="changeG();">綠</button>
+        <hr>
+        <button onclick="changeR('r');">紅</button>
+        <button onclick="changeB('b');">藍</button>
+        <button onclick="changeG('g');">綠</button>
+
+
+        <script>
+            // 紅
+            function changeR() {
+                let mydiv = document.getElementById('myDiv');
+                mydiv.style.backgroundColor = 'red';
+            }
+            // 藍
+            function changeB() {
+                let mydiv = document.getElementById('myDiv');
+                mydiv.style.backgroundColor = 'blue';
+            }
+            // 綠
+            function changeG() {
+                let mydiv = document.getElementById('myDiv');
+                mydiv.style.backgroundColor = 'green';
+            }
+
+            // 整合上方涵式為一個涵式，傳參數
+            function changeColor(myColor){
+                let mydiv = document.getElementById('myDiv');
+                let colorName = '';
+                if(myColor == 'r'){
+                    colorName = 'red';
+                }else if (myColor == 'g'){
+                    colorName = 'green';
+                }else if (myColor == 'b'){
+                    colorName = 'blue';
+                }
+
+                mydiv.style.backgroundColor = colorNam;
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
